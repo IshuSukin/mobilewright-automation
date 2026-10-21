@@ -11,7 +11,7 @@ test('click on the hamburger menu and verify login is visible', async({screen})=
     await screen.getByTestId('com.saucelabs.mydemoapp.android:id/nameET').fill('bob@example.com');
     await screen.getByTestId('com.saucelabs.mydemoapp.android:id/passwordET').fill('10203040');
     await screen.getByTestId('com.saucelabs.mydemoapp.android:id/loginBtn').tap();
-    await expect(screen.getByLabel('title')).toBeVisible();
+    await expect(screen.getByLabel('title')).toHaveText('Products');
    
 })
 // test('user can login with valid credentials', async({screen})=>{
