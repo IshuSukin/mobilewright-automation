@@ -4,7 +4,7 @@ test('app launches and shows the product list', async ({ screen }) => {
   await expect(screen.getByText('Products')).toBeVisible();
 });
 
-test('click on the hamburger menu and verify login is visible', async({screen})=>{
+test.only('click on the hamburger menu and verify login is visible', async({screen})=>{
     await screen.getByTestId('com.saucelabs.mydemoapp.android:id/menuIV').tap();
     await expect(screen.getByText('Log In')).toBeVisible();
     await screen.getByText('Log In').tap();
